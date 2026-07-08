@@ -163,7 +163,10 @@ export default function Home() {
       if (hobbies.trim()) formData.append("hobbies", hobbies.trim());
       if (futurePlans.trim()) formData.append("futurePlans", futurePlans.trim());
 
-      const res = await fetch("http://localhost:3000/generate-caricature", {
+      // Use the environment variable if set, otherwise fallback to the live deployed backend URL
+      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "https://khecchmeribackend.onrender.com";
+      
+      const res = await fetch(`${backendUrl}/generate-caricature`, {
         method: "POST",
         body: formData,
       });

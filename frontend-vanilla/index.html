@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be a Caricature of Your Own</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .caricature-img { max-height: 500px; }
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+  <div class="max-w-5xl mx-auto p-6">
+    <header class="text-center py-8">
+      <h1 class="text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">🎨 Be a Caricature of Your Own</h1>
+      <p class="mt-3 text-xl text-gray-400">Snap → Share Hobbies → Get Your Hilarious Grok Future Self</p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Webcam Section -->
+      <div class="bg-gray-900 rounded-3xl p-8">
+        <h2 class="text-2xl font-semibold mb-6">📸 Step 1: Capture Your Selfie</h2>
+        <video id="video" class="w-full rounded-2xl bg-black aspect-video" autoplay playsinline></video>
+        
+        <div class="flex gap-4 mt-6">
+          <button id="capture" class="flex-1 bg-blue-600 hover:bg-blue-700 py-4 rounded-2xl font-semibold text-lg">📸 Capture</button>
+          <button id="upload-btn" class="flex-1 bg-gray-700 hover:bg-gray-600 py-4 rounded-2xl font-semibold text-lg">📤 Upload Image</button>
+        </div>
+        
+        <input type="file" id="file-upload" accept="image/*" class="hidden">
+        
+        <button id="retake" class="hidden w-full mt-4 bg-gray-700 hover:bg-gray-600 py-3 rounded-2xl">↺ Retake</button>
+      </div>
+
+      <!-- Preview + Inputs -->
+      <div class="bg-gray-900 rounded-3xl p-8">
+        <h2 class="text-2xl font-semibold mb-4">Your Photo</h2>
+        <img id="preview" class="w-full rounded-2xl hidden bg-gray-800" alt="Preview">
+        <canvas id="canvas" class="hidden"></canvas>
+
+        <div class="mt-8 space-y-6">
+          <div>
+            <label class="block text-sm text-gray-400 mb-2">Hobbies & Interests</label>
+            <input id="hobbies" type="text" class="w-full bg-gray-800 border border-gray-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500" placeholder="gaming, hiking, music...">
+          </div>
+          
+          <div>
+            <label class="block text-sm text-gray-400 mb-2">Near Future Plans</label>
+            <textarea id="future" rows="3" class="w-full bg-gray-800 border border-gray-700 rounded-3xl px-5 py-4 focus:outline-none focus:border-purple-500 resize-y" placeholder="Travel to Japan, launch startup..."></textarea>
+          </div>
+        </div>
+
+        <button id="generate" class="w-full mt-8 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-5 rounded-3xl text-xl font-bold disabled:opacity-50 transition-all" disabled>
+          ✨ Generate My Funny Caricature
+        </button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="hidden mt-12 bg-gradient-to-br from-gray-900 to-purple-950 rounded-3xl p-10 text-center">
+      <h2 class="text-4xl font-bold mb-8">🎉 Your Personalized Caricature!</h2>
+      <img id="caricature" class="caricature-img mx-auto rounded-3xl shadow-2xl border-4 border-purple-500" alt="Your Caricature">
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+        <button onclick="downloadCaricature()" class="flex-1 bg-green-600 hover:bg-green-700 py-4 rounded-2xl font-semibold text-lg">⬇️ Download HD</button>
+        <button onclick="window.location.reload()" class="flex-1 bg-gray-700 hover:bg-gray-600 py-4 rounded-2xl font-semibold text-lg">Try Another</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
