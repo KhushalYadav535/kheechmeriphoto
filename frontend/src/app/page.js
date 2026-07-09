@@ -244,6 +244,10 @@ export default function Home() {
         <p className="mt-3 text-xl text-gray-400">
           Snap → Share Hobbies → Get Your Hilarious Grok Future Self
         </p>
+        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-400 font-medium tracking-wide">
+          <span>An initiative by</span>
+          <span className="text-purple-400 font-bold bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">DataTrack</span>
+        </div>
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
