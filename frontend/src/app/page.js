@@ -234,6 +234,12 @@ export default function Home() {
               {loadingText}
             </p>
           </div>
+          
+          {/* Powered by DataTrack branding below loader */}
+          <div className="mt-8 flex items-center justify-center gap-2 text-sm text-gray-400 font-medium tracking-wide">
+            <span>Powered by</span>
+            <span className="text-purple-400 font-bold bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20 shadow-[0_0_15px_rgba(168,85,247,0.2)]">DataTrack</span>
+          </div>
         </div>
       )}
 
