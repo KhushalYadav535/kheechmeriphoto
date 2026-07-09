@@ -328,7 +328,7 @@ export default function Home() {
                 type="text"
                 value={hobbies}
                 onChange={(e) => setHobbies(e.target.value)}
-                className="w-full bg-gray-800 border border-gray-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500 transition-colors"
+                className="w-full bg-gray-800 border border-gray-700 text-white rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500 transition-colors"
                 placeholder="gaming, hiking, music..."
               />
             </div>
@@ -339,7 +339,7 @@ export default function Home() {
                 rows={3}
                 value={futurePlans}
                 onChange={(e) => setFuturePlans(e.target.value)}
-                className="w-full bg-gray-800 border border-gray-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500 resize-y transition-colors"
+                className="w-full bg-gray-800 border border-gray-700 text-white rounded-2xl px-5 py-4 focus:outline-none focus:border-purple-500 resize-y transition-colors"
                 placeholder="Travel to Japan, launch startup..."
               ></textarea>
             </div>
