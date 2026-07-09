@@ -242,7 +242,7 @@ export default function Home() {
           🎨 Be a Caricature of Your Own
         </h1>
         <p className="mt-3 text-xl text-gray-400">
-          Snap → Share Hobbies → Get Your Hilarious Grok Future Self
+          Snap → Share Hobbies → Get Your Hilarious Future Self
         </p>
         <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-400 font-medium tracking-wide">
           <span>An initiative by</span>
@@ -348,7 +348,7 @@ export default function Home() {
                 : "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-lg"
             }`}
           >
-            {loading ? "🤖 Generating with Grok..." : "✨ Generate My Funny Caricature"}
+            {loading ? "🤖 Generating..." : "✨ Generate My Funny Caricature"}
           </button>
           
           {errorMsg && <p className="text-red-400 text-center mt-4">{errorMsg}</p>}
